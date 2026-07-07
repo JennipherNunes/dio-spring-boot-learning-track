@@ -6,12 +6,19 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class Transaction {
+
     private TransactionId id;
     private String description;
     private long amount;
     private Category category;
 
     public Transaction(String description, long amount, Category category) {
+
+        // Validação adicionada
+        if (amount <= 0) {
+            throw new IllegalArgumentException("O valor da transação deve ser maior que zero.");
+        }
+
         this.id = new TransactionId();
         this.description = description;
         this.amount = amount;
