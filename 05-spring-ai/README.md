@@ -83,3 +83,63 @@ Run the application and tests:
 
 - Educational final project focused on AI plus architectural discipline.
 - External provider integration tests may require active credentials.
+
+# Minha Evolução no Projeto
+
+## O que o projeto faz
+
+Este projeto é uma API de orçamento desenvolvida com Spring Boot e Spring AI.  
+A aplicação recebe comandos financeiros por áudio, transforma o áudio em texto, interpreta a intenção com IA e executa ações relacionadas a transações financeiras.
+
+## Como executar a aplicação
+
+Para executar o projeto completo, é necessário ter:
+
+- Java instalado;
+- Gradle;
+- Docker Desktop;
+- uma chave da OpenAI configurada na variável `OPENAI_API_KEY`.
+
+O projeto utiliza Docker para subir o banco de dados MySQL e Spring AI para integração com os modelos de IA.
+
+Durante meus testes, consegui importar o projeto no Eclipse, configurar o Gradle, instalar o Lombok e executar a aplicação até a etapa em que foi identificado que o Docker Desktop era necessário.
+
+## Melhoria implementada
+
+Como evolução simples do projeto, foi adicionada uma documentação mais clara sobre o funcionamento da aplicação, seus requisitos e o fluxo principal.
+
+Também foi proposta uma melhoria de validação para o fluxo de transações financeiras: impedir o cadastro de transações com valor menor ou igual a zero, evitando dados financeiros inválidos.
+
+## Tecnologias usadas
+
+- Java
+- Spring Boot
+- Spring AI
+- Gradle
+- Lombok
+- Docker
+- MySQL
+- OpenAI API
+
+## Como testar o fluxo principal
+
+O fluxo principal esperado é:
+
+1. Enviar um arquivo de áudio para a API.
+2. O áudio é transcrito para texto.
+3. A IA interpreta o comando.
+4. A aplicação executa a ação solicitada.
+5. A resposta é retornada ao usuário.
+
+Para testar completamente, é necessário configurar o Docker Desktop e a variável `OPENAI_API_KEY`.
+
+## O que aprendi
+
+Durante este desafio, aprendi sobre:
+
+- estrutura de projetos Spring Boot;
+- importação de projetos Gradle no Eclipse;
+- configuração do Lombok;
+- uso de Docker para banco de dados;
+- integração de IA com aplicações Java;
+- importância da documentação em projetos no GitHub.
